@@ -1,0 +1,28 @@
+{
+  "name": "sanity-migrator",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "main": "export.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "gen": "node export.js && cat ./sanity_export.json | json2nd > ./sanity_export.ndjson",
+    "export:output": "node output.js",
+    "export:test": "node migrate/test.js",
+    "export": "sanity dataset import ../sanity_export.ndjson production --allow-failing-assets --replace",
+    "dataset:delete": "sanity dataset delete production"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "react-is": "^18.2.0",
+    "sanity": "^3.30.1"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100,
+    "bracketSpacing": false,
+    "singleQuote": true
+  }
+}
