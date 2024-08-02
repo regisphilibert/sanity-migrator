@@ -5,7 +5,7 @@ export default async (endpoint, pages) => {
 
   for (let index = 1; index <= pages; index++) {
     const delimiter = endpoint.includes('?') ? '&' : '?'
-    data = await fetch(endpoint + `${delimiter}page=${index}`)
+    const data = await fetch(endpoint + `${delimiter}page=${index}`)
     entries.push(...data)
   }
   return entries

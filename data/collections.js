@@ -156,7 +156,7 @@ const review = {
 const collections = async () => ([
   home,
   //page,
-  //post,
+  post,
   //person,
   //event,
   //venue,

@@ -1,5 +1,5 @@
-const writeFile = require("./utils/writeFile.js").default
-const fetch = require("./utils/fetch.js").default;
+import writeFile from "./utils/writeFile.js";
+import fetch from "./utils/fetch.js";
 
 
 const run = async () => {

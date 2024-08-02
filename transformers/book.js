@@ -7,7 +7,7 @@ import base from './base.js'
 import rel from './rel.js'
 import rels from './rels.js'
 
-export default  (entry, type) => {
+export default (entry, type) => {
   let output = {...base(entry, type)}
 
   const {

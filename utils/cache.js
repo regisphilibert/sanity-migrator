@@ -25,7 +25,7 @@ const urlToSafeFilename = (url) => {
 
 async function read(endpoint){
   const filename = urlToSafeFilename(endpoint)
-  const filepath = `./cms/migrate/cached/${filename}.json`
+  const filepath = `./cached/${filename}.json`
   try {
       // Check if the file exists
       if (existsSync(filepath)) {
@@ -45,7 +45,7 @@ async function read(endpoint){
 
 function write(endpoint, data){
   const filename = urlToSafeFilename(endpoint)
-  const filepath = `./cms/migrate/cached/${filename}.json`
+  const filepath = `./cached/${filename}.json`
   writeFile(data, filepath)
 }
 

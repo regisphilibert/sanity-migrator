@@ -3,9 +3,10 @@ import fetchPages from "./fetchPages.js"
 
 export default async function(collection) {
   let documents = []
+  let entries = []
   const { type = 'unknown', getter = null, pages = null, endpoints = [], transformer = null } = collection
   if(getter) {
-    const entries = await getter()
+    entries = await getter()
     documents.push(...entries)
     console.log(`${type} OK, with ${documents.length} entries`)
     return documents
